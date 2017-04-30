@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>JC - Super-resolution</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/academicons.css"/>
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!-- FAVICONS -->
+		<link rel="apple-touch-icon" sizes="57x57" href="images/fav/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="images/fav/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="images/fav/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="images/fav/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="images/fav/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="images/fav/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="images/fav/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="images/fav/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="images/fav/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="images/fav/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="images/fav/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="images/fav/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="images/fav/favicon-16x16.png">
+		<link rel="manifest" href="images/fav/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="images/fav/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1>Super-resolution</h1>
+						<p>Jose Caballero</p>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<a href="index.html">
+							<img src="images/fav/android-icon-192x192.png" id="JC" height="35" width="35" align="left"/></a>
+							<li><a href="index.html#bio">Short Bio</a></li>
+							<li><a href="index.html#research" class="active">Research</a></li>
+							<li><a href="index.html#publications">Publications</a></li>
+							<li><a href="code.html">Code</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Content -->
+							<section id="content" class="main">
+								<span class="image main"><img src="images/sr-header.jpg" alt="" /></span>
+								<h3>Summary</h3>
+								<p>Super-resolution (SR) is the process through which low-resolution (LR) data is processed to estimate it's high-resolution (HR) equivalent. This work proposes a new architecture of deep neural networks to achieve real-time SR on mobile GPU, and introduces a new training paradigm that produces photo-realistic super-resolved images.</p>
+
+								<h3>Problem and objectives</h3>
+								<p>Deep neural networks have shown to be powerful for SR. By looking at millions of LR and HR image pairs and optimising a predefined learning cost, a network is capable of progressively estimating a function that reverts the downscaling process. However, the design of traditional approaches has been inefficient, and the use of classical, pixel-wise objective functions is known to produce blurry and visually unsatifactory images. The goal of this project was to improve the efficiency and visual quality of SR with deep networks by proposing architectural changes and a new objective function that forces the generation of photo-realistic images.</p>
+
+								<h3>Improving efficiency</h3>
+								<p>Traditional SR has often decomposed the problem into a bicubic upsampling and a de-blurring stage, mapping the low-pass filtering and decimation stages incurred by image downscaling. The complexity of neural networks is however proportional to input image size, meaning that preprocessing images with bicubic upsampling burdens the computational complexity of the network. Intead, we propose to directly process the input image in LR space, and learn a single function that will jointly upsample and de-blur the image.</p>
+
+								<h3>Improving visual quality</h3>
+								<p>Pixel-wise error metrics such as mean-squared error are often the norm to objectively determine whether a super-reolved image is an accurate estimation of its ground truth or not. Neural networks are therefore often trained to optimise this metric when approximating the SR function. Unfortunately, these metrics are known to correlate poorly with human perception, hence optimal results based on them are not necessarily the most pleasing visually. We modified the training mechanism making use of generative adversarial networks to relax pizel-wise traditional metrics in favour of producing results that are inditinguishable from photo-realistic images.</p>
+
+								<h3>Results</h3>
+								<p>The architectural changes we introduced for SR neural networks was proven to produce state-of-the-art SR results while reducing runtime by x30. This traslated into real-time operation on mobile GPUs, enabling real-time video SR. Additionally, the new training method proposed for SR networks resulted in images that, even though by traditional objective metrics are worse than competing methods, they are visually much more pleasing.</p>
+
+								<hr>
+
+								<h2>Selected publications</h2>
+
+								<p><a href="publications/caballero2017.pdf"><b>Real-time video super-resolution with spatio-temporal networks and motion compensation</b></a><br>
+								J. Caballero, C. Ledig, A. Aitken, A. Acosta, J. Totz, Z. Wang, W. Shi<br>
+								<i>Computer Vision and Pattern Recognition (CVPR), Honolulu, Hawaii, 2017</i></p>
+
+								<p><a href="publications/ledig2017.pdf"><b>Photo-realistic single image super-resolution using a generative adversarial network</b></a><br>
+								C. Ledig, L. Theis, F. Huszar, J. Caballero, A. Cunningham, A. Acosta, A. Aitken, A. Tejani, J. Totz, Z. Wang, W. Shi<br>
+								<i>Computer Vision and Pattern Recognition (CVPR), Honolulu, Hawaii, 2017</i></p>
+
+								<p><a href="publications/shi2016.pdf"><b>Real-time single image and video super-resolution using an efficient sub-pixel convolutional neural network</b></a><br>
+								W. Shi, J. Caballero, F. Huszar, J. Totz, A. Aitken, R. Bishop, D. Rueckert, Z. Wang<br>
+								<i>Computer Vision and Pattern Recognition (CVPR), Las Vegas, NV, 2016</i></p>
+
+								<footer class="major">
+									<ul class="actions">
+										<li><a href="publications.html" class="button">All publications</a></li>
+									</ul>
+								</footer>
+
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<div class="icon-bar">
+								  <a href="mailto:caballero.jimenez.jose@gmail.com"><i class="fa fa-envelope"></i></a> 
+								  <a href="https://twitter.com/josecabjim"><i class="fa fa-twitter"></i></a>
+								  <a href="https://uk.linkedin.com/in/josecabjim"><i class="fa fa-linkedin"></i></a> 
+								  <a href="https://scholar.google.co.uk/citations?user=Y81PB6IAAAAJ&hl=en&authuser=2"><i class="ai ai-google-scholar"></i></a> 
+								  <a href="https://www.researchgate.net/profile/Jose_Caballero7"><i class="ai ai-researchgate"></i></a> 
+							</div>
+						</section>
+						<p class="copyright">&copy; J. Caballero. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>JC - Fast MRI</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/academicons.css"/>
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!-- FAVICONS -->
+		<link rel="apple-touch-icon" sizes="57x57" href="images/fav/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="images/fav/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="images/fav/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="images/fav/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="images/fav/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="images/fav/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="images/fav/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="images/fav/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="images/fav/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="images/fav/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="images/fav/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="images/fav/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="images/fav/favicon-16x16.png">
+		<link rel="manifest" href="images/fav/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="images/fav/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1>Fast MRI</h1>
+						<p>Jose Caballero</p>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<a href="index.html">
+							<img src="images/fav/android-icon-192x192.png" id="JC" height="35" width="35" align="left"/></a>
+							<li><a href="index.html#bio">Short Bio</a></li>
+							<li><a href="index.html#research" class="active">Research</a></li>
+							<li><a href="index.html#publications">Publications</a></li>
+							<li><a href="code.html">Code</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Content -->
+							<section id="content" class="main">
+								<span class="image main"><img src="images/dlmri-header.jpg" alt="" /></span>
+								<h3>Summary</h3>
+								<p>This project proposes to exploit compressed sensing reconstruction techniques to accelerate dynamic Magnetic Resonance Imaging (MRI) acquisition, which is inherently a slow process. Through k-space undersampling and under the assumption that the data is compressible in a sparse domain, MRI acquisition can be accelerated by partially acquiring the amount of data that is otherwise required to produce a dynamic cardiac MR sequence. The novelty of the work stems from the use of dictionary learning methods to learn an adaptive spatio-temporal sparse domain from the data instead of using fixed transform domains, enabling higher acceleration rates.</p>
+
+								<h3>Problem and objectives</h3>
+								<p>MRI is an important tool for medical diagnosis and research, providing unique soft tissue contrast while being non-ionising and non-invasive. However, the generation of images relies on a sequential sampling and the speed at which it can be performed is limited by physiological function. This imposes a sampling budget that is particularly tight in the case of dynamic MRI, such as cardiac cine, where good spatial and temporal resolutions are required. Accelerating imaging speed would not only improve the quality of images and enable new applications, but would also improve patient comfort considerably, as well as maximising machine throughput and therefore profitability.</p>
+
+								<h3>Compressed Sensing MRI</h3>
+								<p>Traditionally, the minimum number of samples required for the acquisition of a signal has been dictated by the Nyquist sampling criterion, with the assumption that the signal of interest is bandlimited, but recently the assumption of redundancy and sparsity of a signal has resulted in more flexible assumptions that allow sampling below the Nyquist rate and still achieve perfect reconstruction. One of these sampling frameworks, termed Compressed Sensing (CS), is theoretically appealing for the case of MRI because the necessary sampling incoherence condition is easily met. One of the main ingredients for successful CSMRI reconstruction is the degree of redundancy or sparsity in the data, with higher sparsity providing higher recovery rates.</p>
+
+								<h3>Dictionary Learning MRI</h3>
+								<p>Fixed-basis transform domains for sparse representation of cardiac cine MRI data can be wavelets, spatio-temporal TV or the temporal Fourier transform domain. Recently, sparse transform domains which can learn from training data and provide an adaptive transform that is optimised for a particular dataset have shown to provide higher degrees of sparsity relative to their fixed-basis counterparts. We apply these novel approaches to cardiac cine MR by constructing spatio-temporal adaptive dictionaries using the K-SVD algorithm.
+
+								<h3>Results</h3>
+								<p>Results show that the method proposed consistently outperforms the reconstruction of another CSMRI method that uses the temporal Fourier transform for sparse representation on examples of synthetic single-coil cardiac cine MR from ten different patients. The method has also been extended to the case of parallel MRI, where acceleration rates generally stagnate at x4, achieving good reconstructions at accelerations of x6.</p>
+
+								<hr>
+
+								<h2>Selected publications</h2>
+
+								<p><a href="publications/caballero2014a.pdf"><b>Dictionary learning and time sparsity for dynamic MR data reconstruction</b></a><br>
+								J. Caballero, A. N. Price, D. Rueckert, J. V. Hajnal<br>
+								<i>IEEE Transactions on Medical Imaging, vol. 33(4), pp. 979-994, 2014</i></p>
+
+								<p><a href="publications/schlemper2017.pdf"><b>A deep cascade of convolutional neural networks for MR image reconstruction</b></a><br>
+								J. Schlemper, J. Caballero, J. V. Hajnal, A. Price, D. Rueckert<br>
+								<i>arXiv, 2017</i></p>
+
+								<p><a href="publications/caballero2015.pdf"><b>Dictionaries for fast and informative dynamic MRI acquisition</b></a><br>
+								J. Caballero<br>
+								<i>Ph.D. Thesis, Imperial College London, 2015</i></p>
+
+								<footer class="major">
+									<ul class="actions">
+										<li><a href="publications.html" class="button">All publications</a></li>
+									</ul>
+								</footer>
+
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<div class="icon-bar">
+								  <a href="mailto:caballero.jimenez.jose@gmail.com"><i class="fa fa-envelope"></i></a> 
+								  <a href="https://twitter.com/josecabjim"><i class="fa fa-twitter"></i></a>
+								  <a href="https://uk.linkedin.com/in/josecabjim"><i class="fa fa-linkedin"></i></a> 
+								  <a href="https://scholar.google.co.uk/citations?user=Y81PB6IAAAAJ&hl=en&authuser=2"><i class="ai ai-google-scholar"></i></a> 
+								  <a href="https://www.researchgate.net/profile/Jose_Caballero7"><i class="ai ai-researchgate"></i></a> 
+							</div>
+						</section>
+						<p class="copyright">&copy; J. Caballero. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

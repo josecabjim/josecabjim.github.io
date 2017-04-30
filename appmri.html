@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>JC - App MRI</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/academicons.css"/>
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!-- FAVICONS -->
+		<link rel="apple-touch-icon" sizes="57x57" href="images/fav/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="images/fav/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="images/fav/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="images/fav/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="images/fav/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="images/fav/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="images/fav/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="images/fav/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="images/fav/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="images/fav/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="images/fav/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="images/fav/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="images/fav/favicon-16x16.png">
+		<link rel="manifest" href="images/fav/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="images/fav/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1>Application-driven MRI</h1>
+						<p>Jose Caballero</p>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<a href="index.html">
+							<img src="images/fav/android-icon-192x192.png" id="JC" height="35" width="35" align="left"/></a>
+							<li><a href="index.html#bio">Short Bio</a></li>
+							<li><a href="index.html#research" class="active">Research</a></li>
+							<li><a href="index.html#publications">Publications</a></li>
+							<li><a href="code.html">Code</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Content -->
+							<section id="content" class="main">
+								<span class="image main"><img src="images/appmri-header.jpg" alt="" /></span>
+								<h3>Summary</h3>
+								<p>The traditional imaging pipeline for clinical information extraction (acquisition, reconstruction, analysis) is prone to error propagation and inefficiencies. In cases where the information looked for in an MR image is known beforehand, data processing could be adaptive such that relevant clinical information is obtained directly and reliably. This opens up new possibilities and adds flexibility to the way raw MR data is handled, leading to more efficient paradigms for information extraction from medical imaging data.</p>
+
+								<h3>Problem and objectives</h3>
+								<p>As a particular example of the wider concept of Application-driven MRI, we focus on the problem of joint reconstruction-segmentation of undersampled MR data. We apply this method for left ventricle segmentation in cardiac cine data and for brain tissue segmentation in brain MR. MR acquisition is notoriously time-consuming, and pixel intensity images are rarely the end goal of an MR image. It is usually through further analysis of acquired images that clinically relevant information is extracted. The segmentation of the left ventricle in cardiac cine scans provides invaluable information about cardiac function and mass, revealing clinical indices such as ejection fraction. Likewise, brain tissue segmentation informs brain disseases diagnosis and analysis.</p>
+
+								<h3>Joint reconstruction and segmentation</h3>
+								<p>We propose the modification of a compressed sensing reconstruction method with the introduction of a discriminative model for the image. This forces intensity pixels to be estimated consitently with data acquired and simultaneously belong to one of a few segmentation classes. The discriminative model used is a mixture of Gaussians, therefore penalising intensity values that deviate too much from the mean of the Gaussian they have been attributed. Clusters of pixel intensities are formed and pulled apart, enhancing edges between different regions of the intensity image.</p>
+
+								<h3>Results</h3>
+								<p>The joint reconstruction-segmentation is compared against a Gaussian mixture model segmentation of the fully sampled data. As an alternative workflow to obtain segmented MR images from undersampled data, we compare the performance with a separate method that first reconstructs an intensity image using compressed sensing and then segments it in a separate stage. Although changes in the intensity image reconstruction are subtle, we are able to obtain up to 30% less left ventricle pixel misclassification using the joint approach. Brain tissue segmentation is also shown to be more accurate than the separate method relative to manual labelling. The use of the discriminative modelling then has two consequences: first, it allows to obtain a segmentation of the image as a by-product of the reconstruction, and also, the joint approach better conditions the data for its segmentation.</p>
+
+								<hr>
+								
+								<h2>Selected publications</h2>
+
+								<p><a href="publications/caballero2014c.pdf"><b>Application-driven MRI: Joint reconstruction and segmentation from undersampled MRI data</b></a> - <font color="#ef4c4c">Best paper runner-up</font><br>
+								J. Caballero, W. Bai, A. N. Price, D. Rueckert, J. V. Hajnal<br>
+								<i>Proceedings of the 17th International Conference on Medical Imaging Computing and Computer Assisted Interventions (MICCAI), vol. 1, pp. 106-113, Boston, MA, USA, 2014</i><br></p>
+
+								<p><a href="publications/caballero2015.pdf"><b>Dictionaries for fast and informative dynamic MRI acquisition</b></a><br>
+								J. Caballero<br>
+								<i>Ph.D. Thesis, Imperial College London, 2015</i></p>
+
+								<footer class="major">
+									<ul class="actions">
+										<li><a href="publications.html" class="button">All publications</a></li>
+									</ul>
+								</footer>
+
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<div class="icon-bar">
+								  <a href="mailto:caballero.jimenez.jose@gmail.com"><i class="fa fa-envelope"></i></a> 
+								  <a href="https://twitter.com/josecabjim"><i class="fa fa-twitter"></i></a>
+								  <a href="https://uk.linkedin.com/in/josecabjim"><i class="fa fa-linkedin"></i></a> 
+								  <a href="https://scholar.google.co.uk/citations?user=Y81PB6IAAAAJ&hl=en&authuser=2"><i class="ai ai-google-scholar"></i></a> 
+								  <a href="https://www.researchgate.net/profile/Jose_Caballero7"><i class="ai ai-researchgate"></i></a> 
+							</div>
+						</section>
+						<p class="copyright">&copy; J. Caballero. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

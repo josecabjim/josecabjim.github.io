@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Jose Caballero</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/academicons.css"/>
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!-- FAVICONS -->
+		<link rel="apple-touch-icon" sizes="57x57" href="images/fav/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="images/fav/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="images/fav/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="images/fav/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="images/fav/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="images/fav/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="images/fav/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="images/fav/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="images/fav/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="images/fav/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="images/fav/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="images/fav/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="images/fav/favicon-16x16.png">
+		<link rel="manifest" href="images/fav/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="images/fav/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1>Code</h1>
+						<p>Jose Caballero</p>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<a href="index.html">
+							<img src="images/fav/android-icon-192x192.png" id="JC" height="35" width="35" align="left"/></a>
+							<li><a href="index.html#bio">Short Bio</a></li>
+							<li><a href="index.html#research">Research</a></li>
+							<li><a href="index.html#publications">Publications</a></li>
+							<li><a href="code.html" class="active">Code</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Content -->
+							<section id="content" class="main">
+
+								<!-- Text -->
+									<section>
+										<h2>Application-driven MRI</h2>
+										<p>Matlab demo for the joint reconstruction-segmentation method from undersampled MRI data presented in MICCAI 2014;1:106-113 <a href="publications/caballero2014c.pdf"><b>[pdf]</b></a>. A 2D brain phantom is retrospectively undersampled and jointly reconstructed and segmented identifying four classes with a Gaussian mixture model. The accuracy of the segmentation relative to a fully sampled segmentation is compared with a separate method, where an intensity image is first fully reconstructed and then segmented.</p>
+
+										<p>
+										<i>Note</i></br>
+										The demo requires to download and install the packages KSVD-Box v13 and OMP-Box 10, which can be obtained from <a href="http://www.cs.technion.ac.il/~ronrubin/software.html"><b>Ron Rubinstein's website</b></a>.</p>
+
+										<p><a href="code/Application_drivenMRI.zip"><b>Application-driven MRI demo code</b></a></p>
+
+									</section>
+									<hr>
+									<section>
+										<h2>DLMRI</h2>
+										<p>Matlab implementation for the reconstruction of undersampled dynamic magnitude MR data using the algorithm presented in TMI 2014;33(4):979-994 <a href="publications/caballero2014a.pdf"><b>[pdf]</b></a>. The demo will restrospectively undersample a 32-coil recombined (no SENSE acceleration) cardiac cine dataset and reconstruct it with the proposed method.
+
+										<p>
+										<i>Note</i></br>
+										The demo requires to download and install the packages KSVD-Box v13 and OMP-Box 10, which can be obtained from <a href="http://www.cs.technion.ac.il/~ronrubin/software.html"><b>Ron Rubinstein's website</b></a>.</p>
+
+										<p><a href="code/DLTG_v2.zip"><b>DLTG demo v2</b></a></p>
+
+										<p>The following is an older version (October 2012) of the software which was used for the results in MICCAI 2012;1:256-263 <a href="publications/caballero2012b.pdf"><b>[pdf]</b></a>. The main difference with v2 is that v1 will only process magnitude real-valued data, but not complex-valued data.</p>
+
+										<p><a href="code/DLTG_v1.zip"><b>DLTG demo v1</b></a></p>
+
+
+									</section>
+							</section>
+					</div>
+
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<div class="icon-bar">
+								  <a href="mailto:caballero.jimenez.jose@gmail.com"><i class="fa fa-envelope"></i></a> 
+								  <a href="https://twitter.com/josecabjim"><i class="fa fa-twitter"></i></a>
+								  <a href="https://uk.linkedin.com/in/josecabjim"><i class="fa fa-linkedin"></i></a> 
+								  <a href="https://scholar.google.co.uk/citations?user=Y81PB6IAAAAJ&hl=en&authuser=2"><i class="ai ai-google-scholar"></i></a> 
+								  <a href="https://www.researchgate.net/profile/Jose_Caballero7"><i class="ai ai-researchgate"></i></a> 
+							</div>
+						</section>
+						<p class="copyright">&copy; J. Caballero. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
