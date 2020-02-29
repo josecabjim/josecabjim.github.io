@@ -954,31 +954,31 @@
 	}
 
 /* MODIFIED */
-	.span4 {
-		min-height: 13em;
-	}
-
-	.span4 h3 {
-		padding-top: 0em;
-	}
 
 	.span4 img {
 	    margin-right: 10px;
 		width: 200px;
-	    padding: 0.3em 0 0 0;
 	}
 
 		@media screen and (max-width: 480px) {
 
 			.span4 img {
 		    	margin-right: 30%;
-			    padding: 0 0 0.6em 0;
+			    padding: 0 0 0.7em 0;
 			}
 
 		}
 
 	.span4 .img-left {
 	    float: left;
+	}
+
+		@media screen and (max-width: 480px) {
+			
+		}
+
+	.clearfix {
+	  overflow: auto;
 	}
 
 	.titlename{
