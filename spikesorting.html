@@ -1,17 +1,13 @@
 <!DOCTYPE HTML>
-<!--
-	Stellar by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 	<head>
-		<title>JC - Spike sorting</title>
+		<title>Jose Caballero</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/academicons.css"/>
+		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!-- FAVICONS -->
@@ -36,90 +32,52 @@
 	<body>
 
 		<!-- Wrapper -->
-			<div id="wrapper">
+		<div id="wrapper">
+		<a name="top"></a>
 
-				<!-- Header -->
-					<header id="header">
-						<h1>Spike sorting</h1>
-						<p>Jose Caballero</p>
-					</header>
+			<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<li><a href="index.html#bio" class="active">Bio</a></li>
+					<li><a href="index.html#research">Research</a></li>
+					<li><a href="index.html#publications">Publications</a></li>
+				</ul>
+			</nav>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul>
-							<a href="index.html">
-							<img src="images/fav/android-icon-192x192.png" id="JC" height="35" width="35" align="left"/></a>
-							<li><a href="index.html#bio">Short Bio</a></li>
-							<li><a href="index.html#research" class="active">Research</a></li>
-							<li><a href="index.html#publications">Publications</a></li>
-							<li><a href="code.html">Code</a></li>
-						</ul>
-					</nav>
+			<!-- Main -->
+			<div id="main">
 
-				<!-- Main -->
-					<div id="main">
+				<!-- Content -->
+				<section id="content" class="main">
+				<span class="image main"><img src="images/ssorting-header.jpg" alt="" /></span>
+				<div class=titlename>Jose Caballero</div>
+				<header class="major">
+					<h2>Spike sorting</h2>
+				</header>
+				<h3>Summary</h3>
+				<p>Spike sorting is the task of relating neural spikes in a neural activity recording with specific neurons. Scaling this operation to a large number of neurons is imperative for a comprehensible analysis of brain connectivity but the acquisition of neural activity at large scales is inefficient under the traditional sampling framework. In this work an algorithm is developed combining results from finite rate of innovation sampling and compressed sensing for efficient neural spike sampling.</p>
 
-						<!-- Content -->
-							<section id="content" class="main">
-								<span class="image main"><img src="images/ssorting-header.jpg" alt="" /></span>
-								<h3>Summary</h3>
-								<p>Spike sorting is the task of relating neural spikes in a neural activity recording with specific neurons. Scaling this operation to a large number of neurons is imperative for a comprehensible analysis of brain connectivity but the acquisition of neural activity at large scales is inefficient under the traditional sampling framework. In this work an algorithm is developed combining results from finite rate of innovation sampling and compressed sensing for efficient neural spike sampling.</p>
+				<h3>Problem and objectives</h3>
+				<p>Communication between neurons is carried out by action potentials or spikes propagating as electrical and chemical pulses along the nervous system. Cracking the neural code can provide invaluable medical information boosting research on neurological diseases such as epilepsy or Alzheimer’s disease. Spike sorting is an indispensable tool for the analysis of brain activity at individual neuron resolutions and relies on the ability to detect the temporal occurrence of action potentials and identify a relationship between each one of these and a unique specific neuron. However, a meaningful analysis requires the simultaneous monitoring of thousands of neurons and the performance of spike sorting algorithms increases with multichannel recordings, so the amount of data that has to be collected and processed scales up fast as does the energy consumed by the recording device.</p>
 
-								<h3>Problem and objectives</h3>
-								<p>Communication between neurons is carried out by action potentials or spikes propagating as electrical and chemical pulses along the nervous system. Cracking the neural code can provide invaluable medical information boosting research on neurological diseases such as epilepsy or Alzheimer’s disease. Spike sorting is an indispensable tool for the analysis of brain activity at individual neuron resolutions and relies on the ability to detect the temporal occurrence of action potentials and identify a relationship between each one of these and a unique specific neuron. However, a meaningful analysis requires the simultaneous monitoring of thousands of neurons and the performance of spike sorting algorithms increases with multichannel recordings, so the amount of data that has to be collected and processed scales up fast as does the energy consumed by the recording device.</p>
+				<h3>Sub-Nyquist sampling</h3>
+				<p>The activity of a neuron can be viewed parametrically as a temporal point process of identical spikes and can be considered very redundant in signal space. These are conditions that make neural information suitable to modern sampling techniques, which allow to sample below the Nyquist sampling criterion with no information loss. We propose a novel algorithm for the acquisition of neural activity information at sub-Nyquist rates by combining results from finite rate of innovation sampling and compressed sensing.</p>
 
-								<h3>Sub-Nyquist sampling</h3>
-								<p>The activity of a neuron can be viewed parametrically as a temporal point process of identical spikes and can be considered very redundant in signal space. These are conditions that make neural information suitable to modern sampling techniques, which allow to sample below the Nyquist sampling criterion with no information loss. We propose a novel algorithm for the acquisition of neural activity information at sub-Nyquist rates by combining results from finite rate of innovation sampling and compressed sensing.</p>
+				<h3>Results</h3>
+				<p>We apply the proposed method to extracellular spike recordings with sampling rates x4 below Nyquist. After reconstruction, a standard spike sorting algorithm was able to produce the same sorting performance than with data sampled at Nyquist rate. This implies that the sampling and reconstruction method is able to reproduce characteristic patterns in neural spikes that enable reliable sorting.</p>
 
-								<h3>Results</h3>
-								<p>We apply the proposed method to extracellular spike recordings with sampling rates x4 below Nyquist. After reconstruction, a standard spike sorting algorithm was able to produce the same sorting performance than with data sampled at Nyquist rate. This implies that the sampling and reconstruction method is able to reproduce characteristic patterns in neural spikes that enable reliable sorting.</p>
-
-								<hr>
-								
-								<h2>Selected publications</h2>
-								
-								<p><a href="publications/caballero2012a.pdf"><b>Spike-sorting at sub-Nyquist rates</b></a><br>
-								J. Caballero, J. A. Urigüen, S. R. Schultz, P. L. Dragotti<br>
-								<i>Proceedings of IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), pp. 585-588, Kyoto, Japan, 2012</i></p>
-
-								<p><a href="publications/caballero2011.pdf"><b>Spike sorting at sub-Nyquist rates</b></a><br>
-								J. Caballero<br>
-								<i>M.Sc. Thesis, Imperial College London, 2011</i></p>
-
-								<footer class="major">
-									<ul class="actions">
-										<li><a href="publications.html" class="button">All publications</a></li>
-									</ul>
-								</footer>
-
-							</section>
-
-					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<div class="icon-bar">
-								  <a href="mailto:jose@caballerojose.com"><i class="fa fa-envelope"></i></a> 
-								  <a href="https://twitter.com/josecabjim"><i class="fa fa-twitter"></i></a>
-								  <a href="https://uk.linkedin.com/in/josecabjim"><i class="fa fa-linkedin"></i></a> 
-								  <a href="https://scholar.google.co.uk/citations?user=Y81PB6IAAAAJ&hl=en&authuser=2"><i class="ai ai-google-scholar"></i></a> 
-								  <a href="https://www.researchgate.net/profile/Jose_Caballero7"><i class="ai ai-researchgate"></i></a> 
-							</div>
-						</section>
-						<p class="copyright">&copy; J. Caballero. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-					</footer>
-
+				</section>
+				</div>
 			</div>
+		</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
 	</body>
 </html>
