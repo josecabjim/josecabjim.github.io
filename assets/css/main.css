@@ -981,15 +981,28 @@
 	  overflow: auto;
 	}
 
-	.titlename{
+	.titlename {
 		text-align: right;
 		font-size: 40px;
 		padding: 0 0 0.5em 0;
 	}
 
+	#titlename a {
+		color: #525252;
+	}
+	#titlename a:hover {
+		color: #525252;
+	}
+	#titlename a:active {
+		color: #525252;
+	}
+	#titlename a:visited {
+		color: #525252;
+	}
+
 		@media screen and (max-width: 1680px) {
 
-			.titlename{
+			.titlename {
 				font-size: 2em;
 			}
 
@@ -997,7 +1010,7 @@
 
 		@media screen and (max-width: 1280px) {
 
-			.titlename{
+			.titlename {
 				font-size: 2em;
 			}
 
@@ -1005,7 +1018,7 @@
 
 		@media screen and (max-width: 736px) {
 
-			.titlename{
+			.titlename {
 				font-size: 1.5em;
 			}
 
